@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantumVerse | Quantum Learning Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <a class="brand" href="#home"><span class="brand-icon">⚛</span> Quantum<span>Verse</span></a>
+    <p class="side-label">WORKSPACE</p>
+    <nav>
+      <a href="#home" class="nav-link active" data-page="home">⌂ <span>Dashboard</span></a>
+      <a href="#learn" class="nav-link" data-page="learn">▤ <span>Learn Quantum</span></a>
+      <a href="#qubit" class="nav-link" data-page="qubit">◉ <span>Qubit Lab</span></a>
+      <a href="#gates" class="nav-link" data-page="gates">⌘ <span>Gate Simulator</span></a>
+      <a href="#entangle" class="nav-link" data-page="entangle">✧ <span>Entanglement</span></a>
+      <a href="#algorithms" class="nav-link" data-page="algorithms">⟁ <span>Algorithms</span></a>
+      <a href="#quiz" class="nav-link" data-page="quiz">✎ <span>Knowledge Quiz</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="side-tip">
+        <span>✦ Daily inspiration</span>
+        <p>Explore the strange and beautiful world of quantum physics.</p>
+      </div>
+      <div class="profile-mini">
+        <div class="avatar">Q</div>
+        <div><strong id="sideName">Quantum Learner</strong><small>Explorer account</small></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">QUANTUM LEARNING PLATFORM</span>
+        <div class="top-title">Explore. Experiment. Understand.</div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="themeBtn" title="Change theme">☼</button>
+        <button class="user-btn" id="loginBtn"><span class="avatar small">Q</span><span id="topName">Sign in</span></button>
+      </div>
+    </header>
+
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="pill">✦ YOUR QUANTUM JOURNEY STARTS HERE</span>
+          <h1>Think beyond<br>the <span>classical.</span></h1>
+          <p>Learn quantum computing through interactive lessons, visual experiments and hands-on simulations.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" data-go="learn">Start learning <span>→</span></button>
+            <button class="outline-btn" data-go="qubit">Explore the lab</button>
+          </div>
+          <div class="hero-stats">
+            <div><strong>06</strong><small>Learning modules</small></div>
+            <div><strong>04</strong><small>Quantum gates</small></div>
+            <div><strong>20+</strong><small>Quiz questions</small></div>
+          </div>
+        </div>
+        <div class="atom-art">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="atom-core">Ψ</div>
+          <span class="atom-label label-one">|0⟩</span>
+          <span class="atom-label label-two">|1⟩</span>
+          <span class="atom-label label-three">QUBIT</span>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div><span class="eyebrow">YOUR LEARNING SPACE</span><h2>Learning dashboard</h2></div>
+        <span class="live-tag">● LIVE PROGRESS</span>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-icon purple">▤</div><strong id="completedCount">0</strong><span>Lessons completed</span><small>Keep learning every day</small></div>
+        <div class="stat-card"><div class="stat-icon blue">✧</div><strong id="gateCount">0</strong><span>Gate experiments</span><small>Your lab activity</small></div>
+        <div class="stat-card"><div class="stat-icon pink">✎</div><strong id="bestScore">0</strong><span>Best quiz score</span><small>Out of 20 questions</small></div>
+        <div class="stat-card"><div class="stat-icon green">◉</div><strong id="progressPercent">0%</strong><span>Course progress</span><small>Personal learning journey</small></div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="panel progress-panel">
+          <div class="panel-heading"><div><span class="eyebrow">YOUR JOURNEY</span><h3>Learning progress</h3></div><span class="mini-icon">↗</span></div>
+          <div class="progress-number"><strong id="progressLarge">0%</strong><span>overall completion</span></div>
+          <div class="progress-track"><div id="progressBar"></div></div>
+          <p id="progressMessage">Start your first lesson to build your progress.</p>
+          <button class="text-btn" data-go="learn">Continue learning →</button>
+        </div>
+        <div class="panel quick-panel">
+          <span class="eyebrow">QUICK ACCESS</span><h3>Jump into the lab</h3>
+          <button class="quick-link" data-go="qubit"><span>◉</span><div><strong>Qubit playground</strong><small>Explore quantum states</small></div><b>→</b></button>
+          <button class="quick-link" data-go="gates"><span>⌘</span><div><strong>Gate simulator</strong><small>Apply quantum operations</small></div><b>→</b></button>
+          <button class="quick-link" data-go="quiz"><span>✎</span><div><strong>Test your knowledge</strong><small>Take a quick quiz</small></div><b>→</b></button>
+        </div>
+      </div>
+      <div class="section-heading"><div><span class="eyebrow">PICK UP A NEW SKILL</span><h2>Featured learning paths</h2></div><button class="text-btn" data-go="learn">View all →</button></div>
+      <div class="featured-grid">
+        <article class="feature-card feature-purple"><span>01 / FUNDAMENTALS</span><div class="feature-symbol">|ψ⟩</div><h3>Quantum Basics</h3><p>Discover qubits, superposition and measurement.</p><button data-lesson="Qubit">Explore lesson →</button></article>
+        <article class="feature-card feature-blue"><span>02 / EXPERIMENT</span><div class="feature-symbol">◉</div><h3>Quantum Gates</h3><p>Build intuition by applying quantum gates.</p><button data-go="gates">Open simulator →</button></article>
+        <article class="feature-card feature-pink"><span>03 / ADVANCED</span><div class="feature-symbol">∞</div><h3>Entanglement</h3><p>Explore correlations between quantum systems.</p><button data-lesson="Entanglement">Explore lesson →</button></article>
+      </div>
+    </section>
+
+    <section class="page" id="learn">
+      <div class="page-heading"><span class="eyebrow">KNOWLEDGE LIBRARY</span><h1>Learn <span>Quantum</span></h1><p>Build your understanding one concept at a time.</p></div>
+      <div class="search-row"><input id="lessonSearch" placeholder="Search lessons..."><span>⌕</span></div>
+      <div class="lesson-grid" id="lessonGrid"></div>
+      <div class="panel lesson-view" id="lessonView">
+        <button class="text-btn" id="backLessons">← Back to lessons</button>
+        <span class="eyebrow" id="lessonTag">LESSON</span>
+        <h2 id="lessonTitle">Choose a lesson</h2>
+        <p id="lessonIntro">Select a lesson card to start learning.</p>
+        <div id="lessonBody"></div>
+        <div class="lesson-nav"><button class="outline-btn" id="prevLesson">← Previous</button><button class="primary-btn" id="completeLesson">Mark completed ✓</button><button class="outline-btn" id="nextLesson">Next →</button></div>
+      </div>
+    </section>
+
+    <section class="page" id="qubit">
+      <div class="page-heading"><span class="eyebrow">INTERACTIVE EXPERIMENT</span><h1>Qubit <span>Playground</span></h1><p>Change the qubit angles and observe its measurement probabilities.</p></div>
+      <div class="lab-grid">
+        <div class="panel">
+          <h3>Qubit state controls</h3>
+          <label>Theta angle <strong id="thetaValue">0°</strong></label><input type="range" id="theta" min="0" max="180" value="0">
+          <label>Phi angle <strong id="phiValue">0°</strong></label><input type="range" id="phi" min="0" max="360" value="0">
+          <div class="button-row"><button class="primary-btn" id="measureBtn">Measure qubit</button><button class="outline-btn" id="resetQubit">Reset</button></div>
+          <div class="result-box" id="measureResult">Ready to measure.</div>
+        </div>
+        <div class="panel">
+          <h3>Measurement probabilities</h3>
+          <div class="prob-row"><span>Outcome |0⟩</span><strong id="pZero">100%</strong></div><div class="progress-track"><div id="pZeroBar"></div></div>
+          <div class="prob-row"><span>Outcome |1⟩</span><strong id="pOne">0%</strong></div><div class="progress-track"><div id="pOneBar"></div></div>
+          <div class="state-display"><span>Quantum state</span><strong id="stateText">|ψ⟩ = |0⟩</strong></div>
+          <p class="muted">The probability values follow the Born rule for this single-qubit educational simulation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="gates">
+      <div class="page-heading"><span class="eyebrow">CIRCUIT PLAYGROUND</span><h1>Quantum Gate <span>Simulator</span></h1><p>Apply gates to a single qubit and inspect the resulting state.</p></div>
+      <div class="panel">
+        <h3>Choose a quantum gate</h3>
+        <div class="gate-grid">
+          <button class="gate-button" data-gate="X"><strong>X</strong><span>Pauli-X</span><small>Bit flip</small></button>
+          <button class="gate-button" data-gate="Y"><strong>Y</strong><span>Pauli-Y</span><small>Bit + phase flip</small></button>
+          <button class="gate-button" data-gate="Z"><strong>Z</strong><span>Pauli-Z</span><small>Phase flip</small></button>
+          <button class="gate-button" data-gate="H"><strong>H</strong><span>Hadamard</span><small>Superposition</small></button>
+        </div>
+        <div class="circuit-box"><span class="eyebrow">YOUR CIRCUIT</span><div id="circuitGates" class="circuit-gates">Initial state |0⟩</div><div class="state-display"><span>Output state</span><strong id="gateState">|ψ⟩ = |0⟩</strong></div><div id="gateProb" class="muted">P(0) = 100% · P(1) = 0%</div></div>
+        <button class="outline-btn" id="resetGates">Reset circuit</button>
+      </div>
+    </section>
+
+    <section class="page" id="entangle">
+      <div class="page-heading"><span class="eyebrow">TWO-QUBIT EXPERIMENT</span><h1>Quantum <span>Entanglement</span></h1><p>Explore a Bell pair and observe correlated measurement outcomes.</p></div>
+      <div class="dashboard-grid">
+        <div class="panel">
+          <div class="entangle-visual"><div class="qubit-node">Q0</div><div class="entangle-link">∞</div><div class="qubit-node">Q1</div></div>
+          <h3>Bell state |Φ+⟩</h3><div class="equation">(|00⟩ + |11⟩) / √2</div>
+          <p class="muted">This state produces matching outcomes when both qubits are measured in the computational basis.</p>
+          <button class="primary-btn" id="bellMeasure">Measure Bell pair</button><button class="outline-btn" id="bellReset">Reset experiment</button>
+          <div class="result-box" id="bellResult">Waiting for measurement...</div>
+        </div>
+        <div class="panel"><h3>Measurement results</h3><div class="stat-card"><strong id="bellTotal">0</strong><span>Total measurements</span></div><div class="prob-row"><span>Outcome 00</span><strong id="bell00">0</strong></div><div class="progress-track"><div id="bellBar00"></div></div><div class="prob-row"><span>Outcome 11</span><strong id="bell11">0</strong></div><div class="progress-track"><div id="bellBar11"></div></div><p class="muted">Random measurement results are simulated locally in your browser.</p></div>
+      </div>
+    </section>
+
+    <section class="page" id="algorithms">
+      <div class="page-heading"><span class="eyebrow">QUANTUM COMPUTING IN ACTION</span><h1>Quantum <span>Algorithms</span></h1><p>Understand important algorithms through small educational demonstrations.</p></div>
+      <div class="dashboard-grid">
+        <div class="panel"><span class="pill">SEARCH ALGORITHM</span><h2>Grover's Search</h2><p class="muted">Choose a marked item in a four-item search space. The demo applies an oracle and diffusion step.</p><label>Choose target item</label><select id="groverTarget"><option value="0">Item 0</option><option value="1">Item 1</option><option value="2">Item 2</option><option value="3">Item 3</option></select><button class="primary-btn" id="runGrover">Run Grover demo</button><div id="groverResult" class="result-box">Choose a target and run the demo.</div><div id="groverBars"></div></div>
+        <div class="panel"><span class="pill">FACTORING CONCEPT</span><h2>Shor's Algorithm concept</h2><p class="muted">Try a small integer to explore its factors. This is a classical factor demonstration, not a quantum implementation of Shor's algorithm.</p><label>Enter integer (4–100)</label><input type="number" id="factorInput" min="4" max="100" value="15"><button class="primary-btn" id="factorBtn">Find factors</button><div id="factorResult" class="result-box">Your result will appear here.</div></div>
+      </div>
+    </section>
+
+    <section class="page" id="quiz">
+      <div class="page-heading"><span class="eyebrow">CHECK YOUR UNDERSTANDING</span><h1>Knowledge <span>Quiz</span></h1><p>Answer 10 questions and test what you have learned.</p></div>
+      <div class="panel quiz-panel">
+        <div class="quiz-top"><span id="questionCount">Question 1 / 10</span><span id="quizScore">Score: 0</span></div>
+        <div class="progress-track"><div id="quizBar"></div></div>
+        <h2 id="questionText">Loading question...</h2>
+        <div id="answerList" class="answer-list"></div>
+        <p id="answerFeedback" class="result-box">Choose your answer.</p>
+        <div class="button-row"><button class="outline-btn" id="restartQuiz">Restart</button><button class="primary-btn" id="nextQuestion" disabled>Next question →</button></div>
+        <div id="quizFinal"></div>
+      </div>
+    </section>
+
+    <footer>⚛ QuantumVerse <span>Learn quantum computing through exploration.</span></footer>
+  </main>
+</div>
+
+<div class="modal" id="loginModal">
+  <div class="modal-card">
+    <button class="modal-close" id="closeLogin">×</button>
+    <span class="eyebrow">WELCOME TO QUANTUMVERSE</span>
+    <h2>Create your learner profile</h2>
+    <p class="muted">Your progress is saved in this browser.</p>
+    <label>Your name</label><input id="learnerName" placeholder="Enter your name">
+    <button class="primary-btn" id="saveProfile">Continue learning →</button>
+  </div>
+</div>
+</body>
+</html>
